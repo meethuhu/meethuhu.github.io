@@ -1,0 +1,98 @@
+:root {
+    --header-flex: 0;
+    --main-flex: 9;
+    --footer-flex: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", "LXGW WenKai Screen", Courier, monospace;
+    box-sizing: border-box;
+    color: #4a5055;
+}
+
+a {
+    text-decoration: none;
+    color: #3391ff;
+}
+
+body,
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    display: flex;
+}
+main {
+    flex: var(--main-flex);
+}
+
+.joker-emoji {
+    width: 200px;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
+.joker-button {
+    width: 10.5em;
+    height: 2em;
+    border: none;
+    border-radius: 6px;
+    background-color: #00a86f;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 1000;
+
+    box-shadow: #ccc 0px 3px 3px;
+}
+
+footer {
+    flex: var(--footer-flex);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    width: 100vw;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+}
+
+.juzi {
+    padding: 0 3em;
+}
+
+@media screen and (max-width: 1080px) {
+    .joker-emoji {
+        width: 38vw;
+        max-width: 256px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .joker-button{
+        font-size: .9rem;
+    }
+
+    .juzi {
+        font-size: .9rem;
+    }
+}

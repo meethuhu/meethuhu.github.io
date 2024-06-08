@@ -4,99 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"> -->
     <title>🤣👉🤡</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        a {
-            text-decoration: none;
-            color: #3391FF;
-        }
-
-        body {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-box>img {
-            width: 256px;
-        }
-
-        @media screen and (max-width:1080px) {
-            .image-box>img {
-                width: 35vw;
-                max-width: 256px;
-            }
-
-            h2 {
-                font-size: 1.2rem;
-            }
-        }
-
-        .image-box {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .text-box {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .joker-button {
-            width: 10em;
-            height: 2em;
-            border: none;
-            border-radius: 6px;
-            background-color: #00A86F;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 1000;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css">
 </head>
 
 <body>
-    <div class="image-box">
-        <img class="joker-emoji" src="https://i.loli.wiki/public/240609/joker_one.png" alt="JOKER_EMOJI">
-    </div>
+    <main>
+        <div class="image-box">
+            <img class="joker-emoji" src="https://i.loli.wiki/public/240609/joker_one.png" alt="JOKER_EMOJI">
+            <img src="https://i.loli.wiki/public/240609/joker.png" alt="" style="display: none;">
+        </div>
 
-    <div class="text-box">
-        <h2>Welcome to <a href=https://🤡.pp.ua>🤡.pp.ua</a></h2>
-    </div>
+        <div class="text-box">
+            <h2>Welcome to <a href=https://🤡.pp.ua>🤡.pp.ua</a></h2>
+        </div>
 
-    <div class="button-box">
-        <button class="joker-button">
-            I'm not a clown
-        </button>
-    </div>
+        <div class="button-box">
+            <button class="joker-button">
+                I'm not a clown
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p class="juzi">如果你觉得累，其实告别并没有错</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
-<script>
-    document.body.style.height = window.innerHeight + 'px'
-
-    const jokerButton = document.querySelector('.joker-button')
-    const jokerImageSrc = 'https://i.loli.wiki/public/240609/joker.png'
-    let jokerImage = document.querySelector('.joker-emoji')
-
-    jokerButton.onclick = () => {
-        jokerImage.src = jokerImageSrc;
-
-        clearTimeout(time1);
-        let time1 = setTimeout(() => {
-            jokerImage.src = jokerImageList[0];
-        }, 2800);
-    };
-
-</script>
-
 </html>
