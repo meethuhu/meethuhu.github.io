@@ -35,7 +35,7 @@
                 max-width: 256px;
             }
 
-            h2{
+            h2 {
                 font-size: 1.2rem;
             }
         }
@@ -52,10 +52,10 @@
             margin-bottom: 30px;
         }
 
-        .imnotaclown {
+        .joker-button {
             width: 10em;
             height: 2em;
-            border:none;
+            border: none;
             border-radius: 6px;
             background-color: #00A86F;
             color: #fff;
@@ -67,7 +67,7 @@
 
 <body>
     <div class="image-box">
-        <img class="joker-emoji" src="https://i.p-i.vip/14/20240608-66644c273150e.png" alt="JOKER_EMOJI">
+        <img class="joker-emoji" src="https://i.loli.wiki/public/240609/joker_one.png" alt="JOKER_EMOJI">
     </div>
 
     <div class="text-box">
@@ -75,7 +75,7 @@
     </div>
 
     <div class="button-box">
-        <button class="imnotaclown">
+        <button class="joker-button">
             I'm not a clown
         </button>
     </div>
@@ -84,20 +84,16 @@
 <script>
     document.body.style.height = window.innerHeight + 'px'
 
-    const jokerButton = document.querySelector('.imnotaclown')
-    const jokerImageList = ['https://i.p-i.vip/14/20240608-66644c273150e.png', 'https://www.emojiall.com/images/240/microsoft-teams/1.0/1f921.png']
-    let jokerImage = document.querySelector('.image-box>img')
-
+    const jokerButton = document.querySelector('.joker-button')
+    const jokerImageSrc = 'https://i.loli.wiki/public/240609/joker.png'
+    let jokerImage = document.querySelector('.joker-emoji')
 
     jokerButton.onclick = () => {
-        jokerButton.disabled = true;
-        jokerImage.src = jokerImageList[1];
+        jokerImage.src = jokerImageSrc;
 
-        setTimeout(() => {
+        clearTimeout(time1);
+        let time1 = setTimeout(() => {
             jokerImage.src = jokerImageList[0];
-            setTimeout(() => {
-                jokerButton.disabled = false
-            }, 300)
         }, 2800);
     };
 
