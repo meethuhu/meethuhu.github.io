@@ -1,1 +1,106 @@
-Welcom!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap"> -->
+    <title>🤣👉🤡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3391FF;
+        }
+
+        body {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box>img {
+            width: 256px;
+        }
+
+        @media screen and (max-width:1080px) {
+            .image-box>img {
+                width: 35vw;
+                max-width: 256px;
+            }
+
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+
+        .image-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .text-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .imnotaclown {
+            width: 10em;
+            height: 2em;
+            border:none;
+            border-radius: 6px;
+            background-color: #00A86F;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-box">
+        <img class="joker-emoji" src="/src/Joker1.png" alt="JOKER_EMOJI">
+    </div>
+
+    <div class="text-box">
+        <h2>Welcome to <a href=https://🤡.pp.ua>🤡.pp.ua</a></h2>
+    </div>
+
+    <div class="button-box">
+        <button class="imnotaclown">
+            I'm not a clown
+        </button>
+    </div>
+</body>
+
+<script>
+    document.body.style.height = window.innerHeight + 'px'
+
+    const jokerButton = document.querySelector('.imnotaclown')
+    const jokerImageList = ['https://i.p-i.vip/14/20240608-66644c273150e.png', 'https://i.p-i.vip/14/20240608-66644c278d70f.png']
+    let jokerImage = document.querySelector('.image-box>img')
+
+
+    jokerButton.onclick = () => {
+        jokerButton.disabled = true;
+        jokerImage.src = jokerImageList[1];
+
+        setTimeout(() => {
+            jokerImage.src = jokerImageList[0];
+            setTimeout(() => {
+                jokerButton.disabled = false
+            }, 300)
+        }, 2800);
+    };
+
+</script>
+
+</html>
